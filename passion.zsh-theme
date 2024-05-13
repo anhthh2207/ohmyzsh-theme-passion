@@ -120,21 +120,21 @@ output_command_execute_after() {
     local color_time="$fg_no_bold[cyan]";
     time="${color_time}${time}${color_reset}";
 
-    # cost
-    local time_end="$(current_time_millis)";
-    local cost=$(bc -l <<<"${time_end}-${COMMAND_TIME_BEGIN}");
-    COMMAND_TIME_BEGIN="-20200325"
-    local length_cost=${#cost};
-    if [ "$length_cost" = "4" ];
-    then
-        cost="0${cost}"
-    fi
-    cost="[cost ${cost}s]"
-    local color_cost="$fg_no_bold[cyan]";
-    cost="${color_cost}${cost}${color_reset}";
+    # # cost
+    # local time_end="$(current_time_millis)";
+    # local cost=$(bc -l <<<"${time_end}-${COMMAND_TIME_BEGIN}");
+    # COMMAND_TIME_BEGIN="-20200325"
+    # local length_cost=${#cost};
+    # if [ "$length_cost" = "4" ];
+    # then
+    #     cost="0${cost}"
+    # fi
+    # cost="[cost ${cost}s]"
+    # local color_cost="$fg_no_bold[cyan]";
+    # cost="${color_cost}${cost}${color_reset}";
 
-    echo -e "${time} ${cost} ${cmd}";
-    echo -e "";
+    # echo -e "${time} ${cost} ${cmd}";
+    # echo -e "";
 }
 
 
